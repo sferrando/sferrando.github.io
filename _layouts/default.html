@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>Happy Jekylling! - </title>
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/8885f33f40.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h2 id="youre-ready-to-go">You’re ready to go!</h2>
-
-<p>Start developing your Jekyll website.</p>
-
+    {{ content }}
   </body>
 </html>
