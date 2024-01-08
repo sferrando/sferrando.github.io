@@ -56,12 +56,7 @@ tailwind.config = {
                     '900': '#344674',
                     '950': '#232d48',
                 }
-            },
-            fontFamily: {
-                title: ['"Exo 2"', "oblique"],
-                subtitle: ['Roboto Mono'],
-                body: ['Rasa', 'serif'],  
-            },
+            }
         }
-    },
+    }
 }
