@@ -21,6 +21,21 @@ title: "Descubre mi historia"
     {% for job in site.data.jobs %}
       {% assign mod = forloop.index | modulo: 2 %}
       {% if mod == 0 %}
+        <div class="flex md:contents">
+          <div class="z-0 relative col-start-5 col-end-6 mr-7 md:mx-auto">
+              <div class="flex items-center justify-center w-6 h-full">
+                  <div class="w-1 h-full bg-gray-200 bg-opacity-60"></div>
+              </div>
+              <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-{{ job.color }}-neon rounded-full top-1/2"></div>
+          </div>
+          <div class="z-0 relative p-4 my-6 text-gray-800 bg-gray-50 rounded-xl col-start-6 col-end-10 mr-auto">
+            <span class="text-xs font-medium">{{ job.title }}</span>
+            <h3 class="text-lg font-semibold lg:text-xl">{{ job.company }}</h3>
+            <p class="mt-2 leading-6">{{ job.description }}</p>
+            <div class="absolute text-sm text-purple-dark font-semibold -top-5 left-2 whitespace-nowrap">{{ job.dates }}<span class="text-gray-400 ml-1.5">({{ job.sum_dates }})</span></div>
+          </div>
+        </div>
+      {% else %}
         <div class="flex md:contents flex-row-reverse">
           <div class="z-0 relative p-4 my-6 text-gray-800 bg-gray-50 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
                 <span class="text-xs font-medium">{{ job.title }}</span>
@@ -34,21 +49,6 @@ title: "Descubre mi historia"
                     </div>
                 </div>
                 <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-{{ job.color }}-neon rounded-full top-1/2"></div>
-            </div>
-        </div>
-      {% else %}
-        <div class="flex md:contents">
-            <div class="z-0 relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-gray-200 bg-opacity-60"></div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-yellow-neon rounded-full top-1/2"></div>
-            </div>
-            <div class="z-0 relative p-4 my-6 text-gray-800 bg-gray-50 rounded-xl col-start-6 col-end-10 mr-auto">
-              <span class="text-xs font-medium">Product designer</span>
-              <h3 class="text-lg font-semibold lg:text-xl">Homyspace</h3>
-              <p class="mt-2 leading-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div class="absolute text-sm text-purple-dark font-semibold -top-5 left-2 whitespace-nowrap">Oct 21 - Oct 23<span class="text-gray-400 ml-1.5">(2 años)</span></div>
             </div>
         </div>
       {% endif %}
