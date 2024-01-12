@@ -2,6 +2,11 @@ tailwind.config = {
     theme: {
         extend: {
             colors: {
+                "blue-neon": "#31E1F7",
+                "pink-neon": "#D800A6",
+                "peach-neon": "#FF7777",
+                "purple-dark": "#400D51",
+                "yellow-neon": "#FFCD4B",
                 primary: {
                     '50': '#f0fbfb',
                     '100': '#d8f4f5',
@@ -56,7 +61,12 @@ tailwind.config = {
                     '900': '#344674',
                     '950': '#232d48',
                 }
-            }
+            },
+            fontFamily: {
+                title: ['"Exo 2"', "oblique"],
+                subtitle: ['Roboto Mono'],
+                body: ['Rasa', 'serif'],  
+            },
         }
-    }
+    },
 }

@@ -1,0 +1,36 @@
+- company: Mercadona
+  title: Product designer
+  dates: Oct 23 - Dic 23
+  sum_dates: 3 meses
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  color: pink
+- company: Homyspace
+  title: Product designer
+  dates: Oct 21 - Oct 23
+  sum_dates: 2 años
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  color: yellow
+- company: Rankia
+  title: UX Lead & RoR developer
+  dates: Dic 16 - Dic 21
+  sum_dates: 5 años
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  color: blue
+- company: Indra
+  title: Backend designer
+  dates: Oct 16 - Dic 16
+  sum_dates: 3 meses
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  color: peach
+- company: Recexval
+  title: Fullstack developer
+  dates: Oct 15 - Oct 17
+  sum_dates: 2 años
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  color: yellow
+- company: Prácticas & Co.
+  title: Web developer
+  dates: 2015 - 2016
+  sum_dates: 8 meses
+  description: Adlemons, FactoryWeb, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  color: pink
