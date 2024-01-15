@@ -59,3 +59,21 @@ title: "Descubre mi historia"
 <h2 class="text-semibold text-4xl mt-12"> 
   Tecnologias y herramientas<span class="text-peach-neon text-6xl">.</span>
 </h2>
+<div class="mt-4">
+  <p>La verdad es que durante mi carrera me he pegado con muchas herramientas y tecnologías distintas. Aquí dejo un picadillo de las más relevantes que uso en mi día a día:</p>
+</div>
+<div class="flex flex-wrap gap-2 py-6">
+  {% for tool in site.data.tools.developer %}
+    <div class="bg-pink-neon shadow my-auto flex text-white font-medium py-2 px-4 rounded-full flex">{{ tool }}</div>
+  {% endfor %}
+  {% for tool in site.data.tools.designer %}
+    <div class="bg-blue-neon shadow my-auto flex text-white font-medium py-2 px-4 rounded-full flex">{{ tool }}</div>
+  {% endfor %}
+  {% for tool in site.data.tools.manager %}
+    <div class="bg-yellow-neon shadow my-auto flex text-white font-medium py-2 px-4 rounded-full flex">{{ tool }}</div>
+  {% endfor %}
+  {% for tool in site.data.tools.marketing %}
+    <div class="bg-peach-neon shadow my-auto flex text-white font-medium py-2 px-4 rounded-full flex">{{ tool }}</div>
+  {% endfor %}
+</div>
+
