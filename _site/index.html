@@ -55,7 +55,8 @@
         </h1>
       </div>
       <div class="col-span-12 max-w-prose">
-        <p>Mi nombre es Sergio Ferrando <span class="waving-hand">👋</span>, explicarte a qué me dedico es un poco complicado.</p>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<p>Mi nombre es Sergio Ferrando <span class="waving-hand">👋</span>, explicarte a qué me dedico es un poco complicado.</p>
 <p>Desde que empecé como programador me di cuenta de que estaba enamorado del proceso de crear producto. Durante mi carrera he ido saltando de rol en rol dentro de la cadena de valor, diseñador, manager, programador, growth hacker, cro... y lo que haga falta.</p>
 <h3 class="text-xl mt-4 font-medium" >¿Qué roles me llegan a representar?</h3>
 <div class="grid grid-cols-3 gap-4 py-8">
@@ -70,8 +71,8 @@
 <p>Muchas veces depende el día, pero sin duda con el que más me divierto es con el rol de <b class="bg-blue-neon px-0.5 bg-opacity-60">product designer</b>.</p>
 <p>Igualmente, el resto de roles siempre terminan sumando en mi día a día ya que de alguna forma siempre hay algún aspecto donde se puede aplicar algún aprendizaje de estos.</p>
 
-<h3 class="text-xl mt-4 font-medium" >Idear, testear e iterar</h3>
-<p>Crear un buen producto no tiene una receta fija, pero si tuviese que crear mi receta la haría partiendo de lo básico <b class="bg-peach-neon px-0.5 bg-opacity-60">Lean + Desing thinking + Agile + Data oriented</b>:</p>
+<h3 class="text-xl mt-4 font-medium" >Idear, testear e iterar como forma de vida</h3>
+<p>No hay una receta fija a la hora de crear un producto, al final el proceso creativo para mi es el concepto de navegar, pero siempre partiendo de lo más básico: <b class="bg-peach-neon px-0.5 bg-opacity-60">Lean + Desing thinking + Agile + Data oriented</b>:</p>
 <ul class="ml-4 py-2">
   <li><span class="text-pink-neon px-2">+</span>Datos, los máximos posibles (cuantitativos y cualitativos)</li>
   <li><span class="text-pink-neon px-2">+</span>Idear sin enamorarnos de nuestras soluciones</li>
@@ -281,6 +282,73 @@
     <p>Blog</p>
   </div>
 </div>
+
+<div class='martin fixed opacity-80 text-blue-neon text-xl'>
+  <i class="fa-solid fa-arrow-pointer"></i>
+  <p class="bg-blue-neon p-1 text-white font-medium text-xs">Martín Zamuner</p>
+</div>
+<div class='edgar fixed opacity-80 text-pink-neon text-xl'>
+  <i class="fa-solid fa-arrow-pointer"></i>
+  <p class="bg-pink-neon p-1 text-white font-medium text-xs">Edgar</p>
+</div>
+<div class='lydia fixed opacity-80 text-yellow-neon text-xl'>
+  <i class="fa-solid fa-arrow-pointer"></i>
+  <p class="bg-yellow-neon p-1 text-white font-medium text-xs">Lydia</p>
+</div>
+
+<script>
+$(document).ready(function(){
+  animateDiv();
+});
+
+function makeNewPosition(){
+  
+  // Get viewport dimensions (remove the dimension of the div)
+  var h = $(document).height() - 50;
+  var w = $(document).width() - 50;
+  
+  var nh = Math.floor(Math.random() * h);
+  var nw = Math.floor(Math.random() * w);
+  
+  return [nh,nw];    
+  
+}
+
+function animateDiv(){
+  var martinNewPosition = makeNewPosition();
+  var martinOldPosition = $('.martin').offset();
+  var martinSpeed = calcSpeed([martinOldPosition.top, martinOldPosition.left], martinNewPosition);
+
+  var edgarNewPosition = makeNewPosition();
+  var edgarOldPosition = $('.edgar').offset();
+  var edgarSpeed = calcSpeed([edgarOldPosition.top, edgarOldPosition.left], edgarNewPosition);
+
+  var lydiaNewPosition = makeNewPosition();
+  var lydiaOldPosition = $('.lydia').offset();
+  var lydiaSpeed = calcSpeed([lydiaOldPosition.top, lydiaOldPosition.left], lydiaNewPosition);
+
+  $('.martin').animate({ top: martinNewPosition[0], left: martinNewPosition[1] }, martinSpeed);
+  $('.edgar').animate({ top: edgarNewPosition[0], left: edgarNewPosition[1] }, edgarSpeed);
+  $('.lydia').animate({ top: lydiaNewPosition[0], left: lydiaNewPosition[1] }, lydiaSpeed);
+  
+  animateDiv();
+};
+
+function calcSpeed(prev, next) {
+    
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+    
+    var greatest = x > y ? x : y;
+    
+    var speedModifier = 1.5;
+
+    var speed = Math.ceil(greatest/speedModifier);
+
+    return speed;
+}
+
+</script>
       </div>
     </section>
   </body>
